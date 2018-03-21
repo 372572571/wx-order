@@ -1,0 +1,255 @@
+/* pages/order/order.wxss */
+
+.page{
+  /*  伸缩布局*/
+    /* overflow-y:hidden;   */
+}
+.order{
+  /* background-color: #ECECEE; */
+}
+.ad{
+  border-top-style:solid;
+  border-top-width: 1rpx;
+  border-top-color: #ECECEE;
+  border-bottom-style: solid;
+  border-bottom-width: 1rpx;
+  border-bottom-color: #ECECEE;
+  margin-bottom: 4rpx;
+  height: 80rpx;
+  z-index: 2003;
+}
+
+.ad-text{
+  position: relative;
+  top: 20rpx;
+  left: 5%;
+  font-size: 30rpx;
+  color: #e64340;
+  font-weight:bold;
+}
+
+.list-left-menu{
+  width:200rpx;
+  background-color:#ECECEE;
+  position:absolute;
+  z-index: 10; /*层级 高在上*/
+  box-shadow:1rpx 1rpx 2rpx 2rpx #ECECEE;
+}
+
+.list-menu-name{
+ position: relative;
+  height: 100rpx;
+  margin-top: 20rpx;
+  color: #3e3b47;
+}
+
+/*选中状态  */
+.list-menu-name-selected
+{
+  height: 100rpx;
+  /* margin-top:14rpx; */
+  background-color: #fff;
+  color: #4d939f;
+}
+.list-menu-name-text{
+  text-align: center;
+  font-size: 30rpx;
+  position: relative;
+  top: 30rpx;
+}
+
+.boox{
+  position:relative;
+  left: 200rpx;
+  margin-top:10rpx;
+  margin-bottom: 10rpx;
+   /* border-radius:10rpx;  */
+  /* background-color: #ECECEE; */
+  box-shadow:1rpx 1rpx 1rpx 1rpx #ECECEE;
+}
+
+.boox-text{
+  position: relative;
+  left: 20rpx;
+  font-size: 28rpx;
+  color: #3e3b47;
+}
+
+.food-boox{
+  margin: 2rpx;
+  display: flex;
+  border-bottom-width: 1px;
+	border-bottom-style: solid;
+  border-bottom-color: #ECECEE;
+}
+
+.food-teble{
+  position: relative;
+  display: flex;
+  left: 31%;
+}
+
+.food-images{
+  height: 150rpx;
+  width: 150rpx;
+  margin: 10rpx;
+}
+
+.food-name{
+  position: relative;
+  top: 20rpx;
+  left: 25rpx;
+  font-size: 30rpx;
+  color: #3e3b47;
+  height: 50rpx
+}
+
+.food-price{
+  position: relative;
+  top:30rpx;
+  color: #1d2025;
+}
+
+.food-controller{
+  position: relative;
+  top:60rpx;
+  left: 80rpx;
+  height: 100rpx;
+  display: flex;
+}
+
+.price-count-price{
+  position: relative;
+  bottom: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  color: #3e3b47;
+}
+
+.shopping-basket{
+  z-index: 1001; 
+  position: fixed;
+  bottom: 0px;
+  height:120rpx;
+  width:100%; 
+  margin-top: 100rpx;
+  display: flex;
+}
+
+.shopping-cart{
+  height: 100%;
+  width: 70%;
+  background-color:#acd0ce;
+  box-shadow:1px 1px 1px 1px #ECECEE inset;
+}
+.count-cart{
+  font-size: 20rpx;
+  font-weight: bolder;
+  text-align: center;
+  position:relative;
+  bottom: 120rpx;
+  z-index: 3000;
+  right: 50rpx;
+  height: 50rpx;
+  width: 60rpx;
+}
+.count-cart>text{
+  position:relative;
+  top: 15rpx;
+}
+.shopping-clearing{
+  width:30%;
+  background-color: #ECECEE;
+  box-shadow:1px 1px 1px 1px #ECECEE inset;
+}
+
+.shopping-cart > view{
+  position: relative;
+  font-size: 80rpx;
+  left: 110rpx;
+  top:25rpx;
+}
+
+.shopping-clearing{
+  position: relative;
+  font-size: 40rpx;
+  text-align: center;
+  padding-top: 30rpx;
+  color: #3e3b47;
+  font-weight: bolder;
+}
+
+.cart-price{
+   position: absolute;
+   z-index: 2001;
+   bottom: 70rpx;
+   left: 180rpx;
+   font-size: 42rpx;
+  color: #ececee;
+  font-weight: bold;
+}
+
+.padding{
+  height: 250rpx;
+}
+.show{
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  /* background-color:rgba(0,0,0,0.5);
+  overflow: hidden;   */
+  }
+.show-cover{
+  /* width: 100%;   */
+  height: 100%;  
+  background-color:rgba(0,0,0,0.5);
+  overflow: hidden;  
+}
+.show-cart{
+  width: 100%;
+  max-height: 300rpx;
+  position: fixed;
+  bottom: 120rpx;
+  /* overflow:hidden; */
+  /* background-color:rgba(0,0,0,0.5); */
+  background-color: #fff;
+}
+
+.show-list{
+  position: relative;
+  display: flex;
+}
+
+.show-list-title{
+  font-size: 35rpx;
+  font:bolder;
+  text-align: center;
+  position: relative;
+  bottom: 0rpx;
+  flex:  50%;
+  margin: 1% 2% 1% 2%;
+}
+
+.show-list-controller{
+  position: relative;
+  display: flex;
+  font-size: 35rpx;
+  font:bolder;
+  text-align: center;
+  bottom: 0rpx;
+  flex:  40%;
+  z-index: 3002;
+  margin: 1% 2% 1% 2%;
+}
+.show-list-controller-add{
+  width: 35%;
+}
+.show-list-controller-delete{
+  width: 35%;
+}
+.show-list-controller-num{
+  width: 30%
+}

@@ -1,0 +1,85 @@
+<view class="order">
+  <view class="ad">
+    <view class="ad-text">凡在本店消费满20赠送饮料一瓶</view>
+  </view>
+  <!--左侧菜单-->
+  <view class="list-left-menu" style="height:1500rpx">
+    <view wx:for="{{listdata.Group}}" wx:for-index="i" wx:for-item="item" wx:key="menuId">
+      <view class="list-menu-name" wx:if="{{i!=index}}">
+        <view class='list-menu-name-text' id="v{{i}}" bindtap='clickView'>{{item.GroupName}}</view>
+      </view>
+      <view class="list-menu-name-selected" wx:else>
+        <view class='list-menu-name-text' id="v{{i}}" bindtap='clickView'>{{item.GroupName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!--右侧菜单  -->
+  <scroll-view scroll-y="true" style="height:1500rpx" scroll-into-view="{{toView}}" bindscroll='leftmenu'>
+    <view wx:for="{{listdata.Group}}" wx:for-index="i" wx:for-item="itme" wx:key="Group">
+      <view class='boox' id='v{{i}}'>
+        <text class='boox-text'>{{itme.GroupName}}</text>
+      </view>
+      <!--商品展示  -->
+      <view wx:for="{{itme.Foods}}" wx:for-item="food" wx:key="foodsid" wx:for-index="foodindex">
+        <view class='food-boox'>
+          <view class="food-teble">
+            <!--商品图标  -->
+            <image class="food-images" src="{{food.ImagesUrl}}"></image>
+            <!--商品名称  -->
+            <view class='food-name'>{{food.FoodName}}
+              <!--商品价格  -->
+              <view class='food-price'>￥ {{food.FoodPrice}} </view>
+            </view>
+            <!--商品添加控件  -->
+            <view class="food-controller">
+              <view class='icon-add_circle' id='{{food.FoodId}}' bindtap='addfood' data-index="{{foodindex}}" data-price="{{food.FoodPrice}}" data-i='{{i}}' data-foodname='{{food.FoodName}}' style='color:#4d939f'>
+              </view>
+
+              <view class="price-count">
+                <view class='price-count-price' hidden="{{food.Count==0}}">
+                  {{food.Count}}</view>
+              </view>
+              <view class='icon-remove_circle_outline' id="{{food.FoodId}}" style='color:#4d939f' bindtap='deletefood' data-i='{{i}}' data-index="{{foodindex}}" hidden="{{food.Count==0}}">
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='padding  '></view>
+  </scroll-view>
+
+  <!--购物车显示  -->
+  <view class='shopping-basket'>
+    <!--购物车  -->
+    <view class='shopping-cart' bindtap='showcart'>
+      <view class='icon-shopping_cart:before' style='color:#4d939f;'>
+        <view class='cart-price' wx:if="{{shoppingCartPrice>0}}">{{shoppingCartPrice}}</view>
+        <view class='count-cart' wx:if="{{foodcount>0}}">
+          <text class='weui-badge'>{{foodcount}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='shopping-clearing'>选好了</view>
+  </view>
+</view>
+
+<!--show cart list -->
+<view class="show" hidden='{{showcart}}' >
+<view class='show-cover' bind:touchstart='showcart' ></view>
+  <scroll-view class="show-cart" scroll-y="true" style='height:{{listmenu.length*30}}px;'>
+    <view class='show-list' wx:for="{{listmenu}}" wx:for-index="ix" wx:for-item="it" wx:key="m">
+      <view class='show-list-title'>{{it.foodname}} </view>
+      <view class='show-list-controller'>
+        <view class='show-list-controller-add'>
+          <text class='icon-add_circle' style='font-size:40prx;color:#4d939f' bind:touchstart='addfood' data-i='{{it.groupi}}' data-index='{{it.foodindex}}' data-foodname='{{it.foodname}}' id='{{it.foodid}}' data-price='{{it.price}}'></text>
+        </view>
+        <view class='show-list-controller-num'>{{it.count}}</view>
+        <view class='show-list-controller-delete'>
+          <text class='icon-remove_circle_outline' style='color:#4d939f;font-size:40prx' bind:touchstart='deletefood' data-i='{{it.groupi}}' data-index='{{it.foodindex}}' data-foodname='{{it.foodname}}' id='{{it.foodid}}' data-price='{{it.price}}'></text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

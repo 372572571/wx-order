@@ -1,0 +1,85 @@
+/**index.wxss**/
+
+.indexswiper {
+  height:550rpx;
+  width: 100%
+}
+
+.slide-image{  
+   height:550rpx;
+  width: 100%;  
+}  
+ .buttonrun{
+    position: absolute;
+    top: 600rpx;
+    width: 84%
+ }
+
+.mepng{
+  position: relative;
+    width:100rpx;
+    height: 100rpx;
+    left: 80rpx
+}
+.mepackage{
+  position: relative;
+  left: 100rpx;
+  bottom: 30rpx;
+  height: 10rpx;
+  font-size: 28rpx;
+  color: #353535;
+  font-weight: bold;
+}
+
+.meorderpng{
+  position: relative;
+    width:100rpx;
+    height: 100rpx;
+    left: 200rpx
+}
+
+.meorder{
+  position: relative;
+  left: 210rpx;
+  bottom: 30rpx;
+  height: 10rpx;
+  font-size: 28rpx;
+  color: #353535;
+  font-weight: bold;
+}
+
+.integralpng{
+  position: relative;
+    width:100rpx;
+    height: 100rpx;
+    left: 80rpx
+}
+.meintegral{
+  position: relative;
+  left: 100rpx;
+  bottom: 30rpx;
+  height: 10rpx;
+  font-size: 28rpx;
+  color: #353535;
+  font-weight: bold;
+}
+
+.activity{
+    position: relative;
+    width:300rpx;
+    height: 150rpx;
+    left: 200rpx;
+    top: 20rpx
+}
+
+.len{
+  width: 500rpx;
+  height: 2rpx
+}
+
+.blhzxsy{
+   position: relative;
+   top: 30rpx;
+  font-size: 20rpx;
+   color: #353535;
+}

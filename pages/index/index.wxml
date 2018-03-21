@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+        class="indexswiper">  
+      <block wx:for="{{imgUrls}}" wx:key="Id">  
+        <swiper-item class="titleimgs">  
+           <navigator url="{{item.link}}" hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="slide-image"/>  
+           </navigator>   
+        </swiper-item>  
+      </block>  
+</swiper>  
+<view class='container'>
+<button class='buttonrun' type='warn' size='default' bind:tap="goorder">开始点餐</button>
+</view>
+<view>
+<image class="mepng" src="/static/imgs/pack.png" bind:tap='gocard' ></image>
+<text class="mepackage" bind:tap='gocard' >我的卡包</text>
+<image class="meorderpng" src="/static/imgs/order.png" bind:tap='goorderinfo'></image>
+<text class="meorder" bind:tap='goorderinfo'>我的订单</text>
+</view>
+
+<view style="height:60rpx"></view>
+
+<view>
+<image class="integralpng" src="/static/imgs/integral.png"></image>
+<text class="meintegral" >我的积分</text>
+<image class="activity" src="/static/imgs/activity.png"></image>
+</view>
+<view style='height:100rpx '></view>
+<view class="weui-footer">
+  <view class="weui-footer__text">- - - - - - - - - - - - - - - - - - - - - - - - - - </view>
+  <view class="weui-footer__text" style='font-size:26rpx;'>mail: 372572571@qq.com</view>
+</view>

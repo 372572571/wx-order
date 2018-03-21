@@ -1,0 +1,66 @@
+/* pages/orderinfo/orderinfo.wxss */
+@import "../card/card.wxss";
+
+.integral-bottom{
+  position: fixed;
+  z-index: 20;
+  margin-left:40%; 
+  margin-right:40%; 
+  bottom: 10rpx;
+  height: 160rpx;
+  width: 160rpx;
+  background-color:#acd0ce;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow:  0 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.integral-bottom>text{
+  margin-top: 40rpx;
+  display: block;
+  font-size: 50rpx;
+  color: #ececee;
+}
+
+.cover-layer{
+  position: absolute;
+  z-index: 30;
+  height: 100%;
+  width:100%;
+  background-color:rgba(0, 0, 0, 0.4);
+}
+
+.order-info{
+  position: absolute;
+  z-index: 40;
+  height: 500rpx;
+  width:70%;
+  top:300rpx;
+  background-color:#fff;
+  margin-left: 15%;
+  margin-right:15%;
+  border-radius: -20rpx;
+}
+
+.order-info-box{
+  display: flex;
+  margin-top: 20rpx;
+  background-color: #ececee; 
+}
+
+.order-info-box-menu-name{
+  text-align: center;
+  width:60%;
+  
+}
+
+.order-info-box-menu-number{
+  text-align: center;
+  width:20%;
+}
+
+.order-info-box-menu-price{
+  text-align: center;
+  width:20%;
+  margin-right:10%;
+}

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/card/card",
+    "pages/orderinfo/orderinfo"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#acd0ce",
+    "navigationBarTitleText": "点餐Demo",
+    "navigationBarTextStyle": "black"
+  }
+}

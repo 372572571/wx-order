@@ -1,0 +1,30 @@
+<!--pages/card/card.wxml-->
+<!--显示用户头像  -->
+<view class='user-info'>
+  <image class='user-info-img-round' style='width:200rpx;height:200rpx;margin: 0 35% 0 35%;' src="{{userInfo.avatarUrl}}"></image>
+</view>
+
+<!--分割线  -->
+<view style='display:flex;width:90%;margin:0 5% 0 5%;'>
+  <view class='line' style='width:30%'></view>
+  <text style='width:40%;margin-top:30rpx;text-align: center;font-size:28rpx;color:#3b3e47;'>{{userInfo.nickName}}</text>
+  <view class='line' style='width :30%'></view>
+</view>
+
+<!--卡包显示  -->
+<scroll-view scroll-y='true' style='height:400px'>
+  <view class='user-info-card' wx:for="{{cardList.card}}" wx:for-item='it' wx:key='k'>
+    <view class='user-info-card-box'>
+      <view class='user-info-card-box-left'>
+        <image src='{{it.Url}}'>
+        </image>
+      </view>
+      <view class='user-info-card-box-right'>
+        <text class='title'>【{{it.CardName}}】 </text>
+        <text class='context'>{{it.context}}</text>
+        <text class='time'>有效期: {{it.TimeMini}} 至 {{it.TimeMax}}</text>
+        <button type='warn'  class='btn' bind:tap='goorder'>开始点餐</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>  

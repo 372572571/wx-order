@@ -1,0 +1,92 @@
+/* pages/card/card.wxss */
+
+.user-info {
+  display: flex;
+  width: 100%rpx;
+}
+
+.user-info-img-round {
+  position: relative;
+  top: 20rpx;
+  bottom: 20rpx;
+  border-radius: 100rpx;
+}
+
+.line {
+  border-bottom-width: 1rpx;
+  display: block;
+  height: 30rpx;
+  border-bottom-style: ridge;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.user-info-card {
+  height: 300rpx;
+  width: 80%;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.user-info-card-box {
+  display: flex;
+  height: 100%;
+  /* background-color: red; */
+  border-bottom-right-radius: 10rpx;
+  box-shadow:	0 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+.user-info-card-box-left {
+  width: 60%;
+  border-right-width: 1px;
+  border-right-color: #ececee;
+  border-right-style: dotted;
+}
+
+.user-info-card-box-left>image {
+  height: 90%;
+  width: 90%;
+  margin: 5%;
+}
+
+.user-info-card-box-right {
+  width: 40%;
+  height: 100%;
+}
+
+.user-info-card-box-right .title {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  font: bolder;
+  text-align: center;
+  color: red;
+  display: block;
+}
+
+.user-info-card-box-right .context {
+  margin-top: 50rpx;
+  font-size: 22rpx;
+  font: bolder;
+  text-align: center;
+  display: block;
+}
+
+.user-info-card-box-right .time {
+  position: relative;
+  bottom: 0px;
+  font-size: 22rpx;
+  font: bolder;
+  color: #3b3e47;
+  text-align: center;
+  display: block;
+}
+
+.user-info-card-box-right .btn {
+  display: block;
+  margin-top: 20rpx;
+  height: 60rpx;
+  width: 80%;
+  font-size: 24rpx;
+}
