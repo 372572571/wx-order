@@ -9,6 +9,8 @@ Page({
   data: {
     orderInfo:[],
     integral:0,
+    showlayer:true,
+    details:[]
   },
 
   /**
@@ -85,5 +87,23 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  details:function(event){
+    this.onshowlayer()
+    var newdetails = this.data.orderInfo.OrderInfo[event.currentTarget.id]
+    //console.log(newdetails)
+    this.setData({
+      details:newdetails
+    })
+  },
+  onshowlayer:function(event){
+    this.setData({
+      showlayer: false
+    })
+  },
+  oncloselayer: function (event) {
+    this.setData({
+      showlayer: true
+    })
   }
 })

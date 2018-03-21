@@ -39,25 +39,36 @@
   background-color:#fff;
   margin-left: 15%;
   margin-right:15%;
-  border-radius: -20rpx;
+  border-radius: 20rpx;
+  text-align:center;
+  box-shadow: 0 0 3rpx 5rpx rgba(0, 0, 0, 0.3);
 }
 
 .order-info-box{
   display: flex;
   margin-top: 20rpx;
-  background-color: #ececee; 
+  border-style:groove;
+  border-width: 1rpx;
+  border-color:#ececee;
+  text-align: center;
 }
 
 .order-info-box-menu-name{
   text-align: center;
   width:60%;
-  
+
 }
 
 .order-info-box-menu-number{
   text-align: center;
   width:20%;
+  border-right-width: 1rpx;
+  border-left-width: 1rpx;
+  border-right-style:groove;
+  border-left-style:groove;
+  border-color: rgba(0, 0, 0, 0.1)
 }
+
 
 .order-info-box-menu-price{
   text-align: center;

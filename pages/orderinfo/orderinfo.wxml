@@ -1,6 +1,6 @@
 <!--pages/orderinfo/orderinfo.wxml-->
 <!-- pop up layer  -->
-<view class='cover-layer'></view>
+<view class='cover-layer' hidden='{{showlayer}}'bind:tap='oncloselayer'></view>
 
 <!--order info list  -->
 <view style='display:flex;width:90%;margin:0 5% 0 5%;'>
@@ -9,7 +9,7 @@
 <scroll-view scroll-y='true' class='scroll-orderinfo' style='height:420px'>
 
   <view class='user-info-card' >
-    <view class='user-info-card-box' wx:for='{{orderInfo.OrderInfo}}' wx:for-item='it' wx:key='k' style='margin-top:40rpx;'>
+    <view class='user-info-card-box' wx:for='{{orderInfo.OrderInfo}}' wx:for-item='it' wx:key='k' style='margin-top:40rpx;'wx:for-index='i'>
       <view class='user-info-card-box-left'>
       <!--订单已完成logo  -->
         <image src='/static/imgs/{{it.Type}}.png' 
@@ -20,7 +20,7 @@
         <text class='title'>{{it.OrderId}} </text>
         <text class='context'>{{it.Total}}RMB 积分{{it.Integral}}</text>
         <text class='time'>{{it.Time}}</text>
-        <button type='warn'  class='btn' bind:tap='goorder'>查看明细</button>
+        <button type='warn' id='{{i}}'  class='btn' bind:tap='details'>查看明细</button>
       </view>
     </view>
   </view>
@@ -33,12 +33,15 @@
   <text>{{integral}}</text>
 </view>
 
-<scroll-view scroll-y='true' class='order-info'>
-  <view class='order-info-box'>
-    <view class='order-info-box-menu-name'>菜名</view>
-    <view class='order-info-box-menu-number'>1</view>
-    <view class='order-info-box-menu-price'>8Rmb</view>
+<scroll-view scroll-y='true' class='order-info'hidden='{{showlayer}}'>
+<text style='font-size:28rpx;'>订单详情</text>
+  <view class='order-info-box'wx:for='{{details.MenuInfo}}'
+    wx:for-index="index" wx:for-item="de" wx:key="key"
+  >
+    <view class='order-info-box-menu-name'>{{de.Name}}</view>
+    <view class='order-info-box-menu-number'>{{de.Num}}</view>
+    <view class='order-info-box-menu-price'>{{de.Price}}</view>
   </view>
-  <view>优惠多少</view>
-  <view>总计</view>
+  <view style='font-size:30rpx;margin-top:20rpx;'>优惠：{{details.Offer}} Rmb</view>
+  <view style='font-size:35rpx;margin-top:20rpx;'>总计：{{details.Total}} Rmb</view>
 </scroll-view>
