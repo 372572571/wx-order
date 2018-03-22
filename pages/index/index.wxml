@@ -23,8 +23,8 @@
 <view style="height:60rpx"></view>
 
 <view>
-<image class="integralpng" src="/static/imgs/integral.png"></image>
-<text class="meintegral" >我的积分</text>
+<image class="integralpng" src="/static/imgs/integral.png" bind:tap='gointegral'></image>
+<text class="meintegral"  bind:tap='gointegral' >我的积分</text>
 <image class="activity" src="/static/imgs/activity.png"></image>
 </view>
 <view style='height:100rpx '></view>

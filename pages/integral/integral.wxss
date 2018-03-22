@@ -1,0 +1,3 @@
+/* pages/integral/integral.wxss */
+@import "../card/card.wxss";
+@import "../orderinfo/orderinfo.wxss"

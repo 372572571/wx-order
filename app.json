@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/order/order",
     "pages/card/card",
-    "pages/orderinfo/orderinfo"
+    "pages/orderinfo/orderinfo",
+    "pages/integral/integral"
     
   ],
   "window": {

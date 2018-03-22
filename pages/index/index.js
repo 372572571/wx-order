@@ -33,5 +33,8 @@ Page({
   },
   goorderinfo:function(){
     common.goorderinfo()
+  },
+  gointegral:function(){
+    common.gointegral()
   }
 })  

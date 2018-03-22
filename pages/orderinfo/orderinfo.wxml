@@ -43,5 +43,5 @@
     <view class='order-info-box-menu-price'>{{de.Price}}</view>
   </view>
   <view style='font-size:30rpx;margin-top:20rpx;'>优惠：{{details.Offer}} Rmb</view>
-  <view style='font-size:35rpx;margin-top:20rpx;'>总计：{{details.Total}} Rmb</view>
+  <view style='font-size:30rpx;margin-top:20rpx;'>总计：{{details.Total}} Rmb</view>
 </scroll-view>

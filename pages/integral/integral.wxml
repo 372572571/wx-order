@@ -1,5 +1,4 @@
-<!--pages/card/card.wxml-->
-
+<!--pages/integral/integral.wxml-->
 <!--显示用户头像  -->
 <view class='user-info'>
   <image class='user-info-img-round' style='width:200rpx;height:200rpx;margin: 0 35% 0 35%;' src="{{userInfo.avatarUrl}}"></image>
@@ -24,8 +23,12 @@
         <text class='title'>【{{it.CardName}}】 </text>
         <text class='context'>{{it.context}}</text>
         <text class='time'>有效期: {{it.TimeMini}} 至 {{it.TimeMax}}</text>
-        <button type='warn'  class='btn' bind:tap='goorder'>开始点餐</button>
+        <button type='warn'  class='btn' bind:tap='goorder'>兑换</button>
       </view>
     </view>
   </view>
 </scroll-view>  
+
+<view class='integral-bottom'>
+  <text>积分</text>
+</view>

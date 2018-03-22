@@ -24,9 +24,17 @@ function gocard() {
     url: '/pages/card/card',
   })
 }
+
+function gointegral(){
+    wx.navigateTo({
+      url: '/pages/integral/integral',
+    })
+}
+
 module.exports = {
   upshopping: upshopping,
   goorder: goorder,
   goorderinfo: goorderinfo,
-  gocard: gocard
+  gocard: gocard,
+  gointegral:gointegral
 }
