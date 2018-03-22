@@ -51,6 +51,7 @@
   border-width: 1rpx;
   border-color:#ececee;
   text-align: center;
+  font-size: 30rpx;
 }
 
 .order-info-box-menu-name{
